@@ -1,0 +1,45 @@
+/* Footer.module.css */
+@tailwind base;
+.footer {
+  @apply bg-gray-800 text-white mt-auto;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+.content {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 mb-8;
+}
+
+.brand {
+  @apply space-y-4;
+}
+
+.brandTitle {
+  @apply text-2xl font-bold;
+}
+
+.brandDescription {
+  @apply text-gray-300;
+}
+
+.links {
+  @apply space-y-4;
+}
+
+.linksTitle {
+  @apply text-lg font-semibold;
+}
+
+.linksList {
+  @apply space-y-2;
+}
+
+.footerLink {
+  @apply text-gray-300 hover:text-white transition-colors duration-200 block;
+}
+
+.copyright {
+  @apply border-t border-gray-700 pt-4 text-center text-gray-300;
+}

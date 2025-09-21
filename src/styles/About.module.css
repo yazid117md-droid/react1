@@ -1,0 +1,97 @@
+/* About.module.css */
+@tailwind base;
+.header {
+  @apply py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white;
+}
+
+.container {
+  @apply max-w-7xl mx-auto text-center;
+}
+
+.title {
+  @apply text-4xl sm:text-5xl font-bold mb-4;
+}
+
+.subtitle {
+  @apply text-xl opacity-90;
+}
+
+.companyInfo {
+  @apply py-16 px-4 sm:px-6 lg:px-8;
+}
+
+.content {
+  @apply max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start;
+}
+
+.text {
+  @apply space-y-6;
+}
+
+.sectionTitle {
+  @apply text-3xl font-bold text-gray-900 mb-6;
+}
+
+.description {
+  @apply text-lg text-gray-600 leading-relaxed;
+}
+
+.stats {
+  @apply grid grid-cols-3 gap-8;
+}
+
+.stat {
+  @apply text-center;
+}
+
+.statNumber {
+  @apply block text-3xl font-bold text-blue-600;
+}
+
+.statLabel {
+  @apply block text-sm text-gray-600 mt-2;
+}
+
+.team {
+  @apply py-16 px-4 sm:px-6 lg:px-8 bg-gray-50;
+}
+
+.teamGrid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8 mt-12;
+}
+
+.teamCard {
+  @apply bg-white p-6 rounded-lg shadow-md text-center;
+}
+
+.teamImage {
+  @apply mb-4;
+}
+
+.avatar {
+  @apply w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto;
+}
+
+.memberName {
+  @apply text-xl font-semibold text-gray-900 mb-1;
+}
+
+.memberRole {
+  @apply text-blue-600 font-medium mb-3;
+}
+
+.memberDescription {
+  @apply text-gray-600;
+}
+
+.cta {
+  @apply py-16 px-4 sm:px-6 lg:px-8 bg-blue-600 text-white text-center;
+}
+
+.ctaTitle {
+  @apply text-3xl font-bold mb-4;
+}
+
+.ctaDescription {
+  @apply text-xl mb-8 opacity-90;
+}
