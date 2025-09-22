@@ -1,96 +1,178 @@
-/* About.module.css */
-.header {
-  @apply py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white;
+:root {
+  --orange-gradient: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
+  --orange: #ff7a00;
+  --orange-light: #ffb347;
+  --white: #ffffff;
+  --dark: #333333;
 }
 
-.container {
-  @apply max-w-7xl mx-auto text-center;
+.about {
+  font-family: Arial, sans-serif;
+  color: var(--dark);
+}
+
+/* Header Section */
+.header {
+  background-color: var(--white);
+  color: var(--orange);
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .title {
-  @apply text-4xl sm:text-5xl font-bold mb-4;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  @apply text-xl opacity-90;
+  font-size: 1.2rem;
 }
 
+/* Company Info */
 .companyInfo {
-  @apply py-16 px-4 sm:px-6 lg:px-8;
+  padding: 60px 20px;
+  background-color: var(--white);
 }
 
 .content {
-  @apply max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
 }
 
 .text {
-  @apply space-y-6;
+  flex: 1;
+  min-width: 280px;
 }
 
 .sectionTitle {
-  @apply text-3xl font-bold text-gray-900 mb-6;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--orange);
 }
 
 .description {
-  @apply text-lg text-gray-600 leading-relaxed;
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
+/* Stats */
 .stats {
-  @apply grid grid-cols-3 gap-8;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .stat {
-  @apply text-center;
+  text-align: center;
 }
 
 .statNumber {
-  @apply block text-3xl font-bold text-blue-600;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--orange);
 }
 
 .statLabel {
-  @apply block text-sm text-gray-600 mt-2;
+  display: block;
+  font-size: 0.9rem;
 }
 
+/* Team Section */
 .team {
-  @apply py-16 px-4 sm:px-6 lg:px-8 bg-gray-50;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.teamTitle {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--orange);
 }
 
 .teamGrid {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-8 mt-12;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 .teamCard {
-  @apply bg-white p-6 rounded-lg shadow-md text-center;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .teamImage {
-  @apply mb-4;
-}
-
-.avatar {
-  @apply w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 15px auto;
 }
 
 .memberName {
-  @apply text-xl font-semibold text-gray-900 mb-1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .memberRole {
-  @apply text-blue-600 font-medium mb-3;
+  color: var(--orange);
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .memberDescription {
-  @apply text-gray-600;
+  font-size: 0.9rem;
+  color: var(--dark);
+  margin-bottom: 15px;
 }
 
+.contactButton {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: var(--orange-light);
+}
+
+/* CTA Section */
 .cta {
-  @apply py-16 px-4 sm:px-6 lg:px-8 bg-blue-600 text-white text-center;
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--orange-gradient);
+  color: var(--white);
 }
 
 .ctaTitle {
-  @apply text-3xl font-bold mb-4;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 .ctaDescription {
-  @apply text-xl mb-8 opacity-90;
+  margin-bottom: 25px;
+}
+
+.ctaButton {
+  background-color: var(--white);
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--orange-light);
+  color: var(--white);
 }

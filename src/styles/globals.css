@@ -1,24 +1,7 @@
-/* Global styles and Tailwind CSS imports */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-}
-
-@layer components {
-  .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200;
-  }
-  
-  .btn-secondary {
-    @apply bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200;
-  }
+:root {
+  --orange-gradient: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
+  --orange: #ff7a00;
+  --orange-light: #ffb347;
+  --white: #ffffff;
+  --dark: #333333;
 }
