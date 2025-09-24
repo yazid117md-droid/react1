@@ -1,66 +1,39 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+// src/pages/TryOTP.jsx
+import React from 'react';
 
-function VerifyOTP() {
-  const [otp, setOtp] = useState('');
-  const [status, setStatus] = useState('');
-  const [contact, setContact] = useState('');
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const savedContact = localStorage.getItem('contact');
-    if (savedContact) {
-      setContact(savedContact);
-    }
-  }, []);
-
-  const handleVerify = () => {
-    if (otp === '123456') {
-      setStatus('success');
-      setTimeout(() => {
-        navigate('/onboarding');
-      }, 1500); // انتظار بسيط قبل التوجيه
-    } else {
-      setStatus('error');
-    }
-  };
-
+function TryOTP() {
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded">
-      <h2 className="text-2xl font-bold mb-4 text-center text-green-600">تحقق من رمز OTP</h2>
+    <div className="min-h-screen bg-[#e43d30] text-white px-6 py-10">
+      <header className="flex justify-between items-center mb-12">
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-[#e43d30] via-orange-400 to-[#e43d30] bg-clip-text text-transparent">
+          Try OTP
+        </h1>
+        <nav className="flex gap-4 text-sm">
+          <a href="/" className="hover:underline">Home</a>
+          <a href="/verify" className="hover:underline">Verify</a>
+        </nav>
+      </header>
 
-      <p className="text-gray-700 mb-4 text-center">
-        تم إرسال رمز التحقق إلى: <span className="font-semibold">{contact}</span>
-      </p>
+      <div className="max-w-md mx-auto bg-white text-[#e43d30] p-8 rounded shadow">
+        <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-[#e43d30] via-orange-400 to-[#e43d30] bg-clip-text text-transparent">
+          Send OTP Code
+        </h2>
 
-      <input
-        type="text"
-        placeholder="أدخل رمز OTP"
-        value={otp}
-        onChange={(e) => setOtp(e.target.value)}
-        className="border p-2 w-full mb-4 rounded text-center"
-      />
-
-      <button
-        onClick={handleVerify}
-        className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 w-full rounded"
-      >
-        تحقق
-      </button>
-
-      {status === 'success' && (
-        <div className="mt-4 p-3 bg-green-100 text-green-800 rounded text-center">
-          ✅ تم التحقق بنجاح! جاري تحويلك إلى إعداد المشروع...
-        </div>
-      )}
-
-      {status === 'error' && (
-        <div className="mt-4 p-3 bg-red-100 text-red-800 rounded text-center">
-          ❌ رمز غير صحيح. حاول مرة أخرى.
-        </div>
-      )}
+        <form className="space-y-4">
+          <input type="text" placeholder="Phone or Email" className="w-full px-4 py-2 border rounded" />
+          <select className="w-full px-4 py-2 border rounded">
+            <option>SMS</option>
+            <option>Email</option>
+            <option>WhatsApp</option>
+            <option>Push</option>
+          </select>
+          <button className="w-full bg-[#ff6c0e] text-white py-2 rounded hover:bg-[#e65c00]">
+            Send Code
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
 
-export default VerifyOTP;
+export default TryOTP;

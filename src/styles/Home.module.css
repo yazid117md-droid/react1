@@ -1,120 +1,89 @@
-:root {
-  --orange-gradient: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
-  --orange: #ff7a00;
-  --orange-light: #ffb347;
-  --white: #ffffff;
-  --dark: #333333;
-}
-
 .home {
-  font-family: Arial, sans-serif;
-  color: var(--dark);
+  background-color: #e43d30;
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
-/* Hero Section */
-.hero {
-  background: var(--orange-gradient);
-  color: var(--white);
-  padding: 80px 20px;
+.heroTitle,
+.featuresTitle {
+  background: linear-gradient(to right, #e43d30, #ff6c0e, #e43d30);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2.5rem;
   text-align: center;
 }
 
-.heroContainer {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.heroTitle {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
 .heroSubtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  color: #f5f5f5;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
 .heroButtons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .heroLink {
-  background-color: var(--white);
-  color: var(--orange);
-  padding: 12px 30px;
-  border: 2px solid var(--orange);
-  border-radius: 5px;
-  text-decoration: none;
+  background-color: white;
+  color: #e43d30;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .heroLink:hover {
-  background-color: var(--orange-light);
-  color: var(--white);
+  background-color: #f0f0f0;
 }
 
 .heroButton {
-  background-color: var(--orange);
-  color: var(--white);
-  border: 2px solid var(--orange);
-  padding: 12px 30px;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #ff6c0e;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .heroButton:hover {
-  background-color: var(--orange-light);
-}
-
-/* Features Section */
-.features {
-  background-color: var(--white);
-  padding: 60px 20px;
-  text-align: center;
+  background-color: #e65c00;
 }
 
 .featuresContainer {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.featuresTitle {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: var(--orange);
+  margin-top: 4rem;
 }
 
 .featuresGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .featureCard {
-  background-color: var(--white);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-.featureCard:hover {
-  transform: translateY(-5px);
+  background-color: white;
+  color: #e43d30;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .featureName {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .featureDescription {
   font-size: 0.95rem;
-  color: var(--dark);
+  color: #e43d30;
 }

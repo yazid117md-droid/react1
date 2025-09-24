@@ -8,7 +8,9 @@ const Home = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContainer}>
-          <h1 className={styles.heroTitle}>Simplified & Secure User Authentication-Powered by mPass Light</h1>
+          <h1 className={styles.heroTitle}>
+            Simplified & Secure User Authentication — Powered by mPass Lite
+          </h1>
           <p className={styles.heroSubtitle}>
             Built with React, Vite, and modern tools. Fully responsive and ready for your projects.
           </p>
