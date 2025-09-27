@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --orange-gradient: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
   --orange: #ff7a00;
